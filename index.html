@@ -1,0 +1,82 @@
+<html>
+
+    <head>
+        <!--<title>My First Website</title>-->
+
+        <style>
+            .row1{
+                width: 1255px;
+                margin: auto ;
+            }
+           
+            .row2{
+                width: 1150;
+                margin: auto ;
+            }
+        
+            .row3{
+                width: 1405px;
+                margin: auto ;
+                object-position: bottom;
+            }
+            .image-container{
+                display:table-cell;
+                vertical-align: middle;
+                padding: 60px;
+            }
+            body{
+                background-image: url('img/brickroad.png');
+                background-size: 100% auto;
+                background-repeat: no-repeat ;
+                background-position:bottom;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    </head>
+
+    <body style="background-color: rgb(243, 224, 224)">
+
+        <div class="row1">
+            <div class="image-container"><img id="frame1" src="img/cooking.png" height="195"/></div>
+            <div class="image-container"><img id="frame2" src="img/argument.png" width="250"/></div>
+            <div class="image-container"><img id="frame3" src="img/growing.png" height="180"/></div>
+        </div>
+
+        <div class="row2">    
+            <div class="image-container"><img id="frame4" src="img/party.png" height="290"/></div>
+            <div class="image-container"><img id="frame6" src="img/film.png" height="280"/></div>
+            <div class="image-container"><img id="frame9" src="img/work.png" height="275"/></div>
+        </div>
+        
+        <div class="row3">
+            <div class="image-container"><img id="frame5" src="img/moving.png" height="225"/></div>
+            <div class="image-container"><img id="frame8" src="img/pets.png" height="260"/></div>
+            <div class="image-container"><img id="frame7" src="img/personal.png" height="250"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/cooking.mp3");
+            var sound2 = new buzz.sound("sound/argument.mp3");
+            var sound3 = new buzz.sound("sound/growing.mp3");
+            var sound4 = new buzz.sound("sound/party.mp3");
+            var sound5 = new buzz.sound("sound/moving.mp3");
+            var sound6 = new buzz.sound("sound/film.mp3");
+            var sound7 = new buzz.sound("sound/personal.mp3");
+            var sound8 = new buzz.sound("sound/pets.mp3");
+            var sound9 = new buzz.sound("sound/work.mp3");
+
+            window.onload = function() {
+                document.getElementById('frame1').addEventListener('click',function(){sound1.play();});
+                document.getElementById('frame2').addEventListener('click',function(){sound2.play();});
+                document.getElementById('frame3').addEventListener('click',function(){sound3.play();});
+                document.getElementById('frame4').addEventListener('click',function(){sound4.play();});
+                document.getElementById('frame5').addEventListener('click',function(){sound5.play();});
+                document.getElementById('frame6').addEventListener('click',function(){sound6.play();});
+                document.getElementById('frame7').addEventListener('click',function(){sound7.play();});
+                document.getElementById('frame8').addEventListener('click',function(){sound8.play();});
+                document.getElementById('frame9').addEventListener('click',function(){sound9.play();});
+        };
+        </script>
+
+    </body>
+</html>
